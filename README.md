@@ -1,11 +1,12 @@
 # RNA-seq
 This is the basic bulk RNA sequencing pipeline.
 
-The pipeline was based off the NNRL lab pipeline.
-This pipeline adapted to run on HPCs running SLURM
-This requires the snakefile RNAseq_v3.0.py, rna_config.json, meta.csv and starts using the rna_submit_snakemake.sh script
+The pipeline was based off the NNRL lab pipeline and is adapted to run on HPCs running SLURM.
 
-# Run with: sbatch --time=24:00:00 rna_submit_snakemake.sh
+This requires the snakefile RNAseq_v3.0.py, rna_config.json, meta.csv and starts using the rna_submit_snakemake.sh script.
+
+### Usage: 
+### sbatch --time=24:00:00 rna_submit_snakemake.sh
 
 
 ## Edit the following files ##
