@@ -26,7 +26,7 @@ NCBI assembly/amnnotation can be downloaded here: [NCBI](https://ftp.ncbi.nlm.ni
 
 * NEEDED files prior to creating indexes:
     + Primary assembly FASTA : Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
-    + cDNA FASTA : concatenated cDNA and ncRNA FASTA
+    + cDNA FASTA : concatenated cDNA and ncRNA FASTA (ex, misc_scripts/merge_cdna-ncrna.sh)
         - Mus_musculus.GRCm39.cdna.all.fa.gz
         - Mus_musculus.GRCm39.ncrna.fa.gz
     + GTF : Mus_musculus.GRCm39.109.gtf.gz
@@ -38,3 +38,6 @@ config.json : edit the path information for the destination indexes and software
 *Make sure the version for STAR and Kallisto are the same as needed in rna_config.json for the RNAseq_v3.0.py snakefile*
 
 
+## Misc files needed ##
+* rRNA.bed file : biowulf location - /fdb/genome/mm39/mm39.rna.fa
+* HKG.bed : [RSeQC](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
