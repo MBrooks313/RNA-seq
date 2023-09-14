@@ -23,14 +23,15 @@ STAR and Kallisto indexes must be created prior to running the main RNAseq_v3.0.
 Ensembl assembly/annotation can be downloaded here: https://ftp.ensembl.org/pub/current_fasta/
 NCBI assembly/amnnotation can be downloaded here: https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Mus_musculus/
 
-NEEDED files prior to creating indexes:
-    Primary assembly FASTA : Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
-    cDNA FASTA : concatenated cDNA and ncRNA FASTA (Mus_musculus.GRCm39.cdna.all.fa.gz, Mus_musculus.GRCm39.ncrna.fa.gz)
-    GTF : Mus_musculus.GRCm39.109.gtf.gz
+* NEEDED files prior to creating indexes:
+    + Primary assembly FASTA : Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
+    + cDNA FASTA : concatenated cDNA and ncRNA FASTA (Mus_musculus.GRCm39.cdna.all.fa.gz, Mus_musculus.GRCm39.ncrna.fa.gz)
+    + GTF : Mus_musculus.GRCm39.109.gtf.gz
 
 
 ## Edit when making indexes ##
 config.json : edit the path information for the destination indexes
-            : make sure the version for STAR and kallisto are the same as needed in rna_config.json for the RNAseq_v3.0.py snakefile
+
+*Make sure the version for STAR and kallisto are the same as needed in rna_config.json for the RNAseq_v3.0.py snakefile*
 
 
