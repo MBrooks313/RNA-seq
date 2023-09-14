@@ -1,0 +1,13 @@
+{
+	"basedir" 				: 	"/data/brooksma/Index/Mouse/ENS/GRCm38.95/",
+	"ref"	 				: 	"/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.dna.primary_assembly.fa",
+	"gtf" 					: 	"/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.95.gtf",
+	"trans" 				: 	"/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.cdna.full.fa",
+	"name" 					: 	"MmENSv95",
+	"kallisto"              :   "0.44.0",
+    "star"                  :   "2.5.4a",
+    "job_all"               :   "--time=10:00:00 --mem=4G  --cpus-per-task=2 --gres=lscratch:100",
+    "job_dirs"              :   "--time=1:00:00 --mem=4G  --cpus-per-task=2 --gres=lscratch:100",
+    "job_kallisto"          :   "--time=04:00:00 --mem=24G  --cpus-per-task=2 --gres=lscratch:100",
+    "job_star"              :   "--time=4:00:00 --mem=96G  --cpus-per-task=12 --gres=lscratch:100"
+}
