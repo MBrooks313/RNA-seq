@@ -20,8 +20,9 @@ rna_config.json : change path to indexes, adapters, and software versions...main
 
 STAR and Kallisto indexes must be created prior to running the main RNAseq_v3.0.py snakefile analysis
 
-Ensembl assembly/annotation can be downloaded here: https://ftp.ensembl.org/pub/current_fasta/
-NCBI assembly/amnnotation can be downloaded here: https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Mus_musculus/
+Ensembl assembly/annotation can be downloaded here: [Ensembl](https://ftp.ensembl.org/pub/current_fasta/)
+
+NCBI assembly/amnnotation can be downloaded here: [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Mus_musculus/)
 
 * NEEDED files prior to creating indexes:
     + Primary assembly FASTA : Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
