@@ -1,8 +1,8 @@
 {
-    "basedir"               :   "/data/brooksma/Index/Mouse/ENS/GRCm38.95/",
-    "ref"                   :   "/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.dna.primary_assembly.fa",
-    "gtf"                   :   "/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.95.gtf",
-    "trans"                 :   "/data/brooksma/Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.cdna.full.fa",
+    "basedir"               :   "</path/to/>Index/Mouse/ENS/GRCm38.95/",
+    "ref"                   :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.dna.primary_assembly.fa",
+    "gtf"                   :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.95.gtf",
+    "trans"                 :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.cdna.full.fa",
     "name"                  :   "MmENSv95",
     "kallisto"              :   "0.44.0",
     "star"                  :   "2.5.4a",
