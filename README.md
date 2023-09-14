@@ -26,7 +26,9 @@ NCBI assembly/amnnotation can be downloaded here: [NCBI](https://ftp.ncbi.nlm.ni
 
 * NEEDED files prior to creating indexes:
     + Primary assembly FASTA : Mus_musculus.GRCm39.dna.primary_assembly.fa.gz
-    + cDNA FASTA : concatenated cDNA and ncRNA FASTA (Mus_musculus.GRCm39.cdna.all.fa.gz, Mus_musculus.GRCm39.ncrna.fa.gz)
+    + cDNA FASTA : concatenated cDNA and ncRNA FASTA
+        - Mus_musculus.GRCm39.cdna.all.fa.gz
+        - Mus_musculus.GRCm39.ncrna.fa.gz)
     + GTF : Mus_musculus.GRCm39.109.gtf.gz
 
 
