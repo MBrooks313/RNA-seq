@@ -1,13 +1,14 @@
 {
-    "basedir"               :   "</path/to/>Index/Mouse/ENS/GRCm38.95/",
-    "ref"                   :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.dna.primary_assembly.fa",
-    "gtf"                   :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.95.gtf",
-    "trans"                 :   "</path/to/>Index/Mouse/ENS/GRCm38.95/Mus_musculus.GRCm38.cdna.full.fa",
+    "ref"                   :   "/data/brooksma/Index/test_index/230918/ENS/GRCm38.95/Mus_musculus.GRCm38.dna.primary_assembly.fa",
+    "gtf"                   :   "/data/brooksma/Index/test_index/230918/ENS/GRCm38.95/Mus_musculus.GRCm38.95.gtf",
+    "trans"                 :   "/data/brooksma/Index/test_index/230918/ENS/GRCm38.95/Mus_musculus.GRCm38.cdna.full.fa",
+    "star_outdir"           :   "/data/brooksma/Index/test_index/230918/ENS/GRCm38.95/STAR/124base/",
+    "kall_outdir"           :   "/data/brooksma/Index/test_index/230918/ENS/GRCm38.95/kallisto/",
     "name"                  :   "MmENSv95",
-    "kallisto"              :   "0.44.0",
-    "star"                  :   "2.5.4a",
+    "kallisto"              :   "0.48.0",
+    "star"                  :   "2.7.10b",
     "job_all"               :   "--time=10:00:00 --mem=4G  --cpus-per-task=2 --gres=lscratch:100",
-    "job_dirs"              :   "--time=1:00:00 --mem=4G  --cpus-per-task=2 --gres=lscratch:100",
+    "job_dirs"              :   "--time=01:00:00 --mem=4G  --cpus-per-task=2 --gres=lscratch:100",
     "job_kallisto"          :   "--time=04:00:00 --mem=24G  --cpus-per-task=2 --gres=lscratch:100",
-    "job_star"              :   "--time=4:00:00 --mem=96G  --cpus-per-task=12 --gres=lscratch:100"
+    "job_star"              :   "--time=04:00:00 --mem=96G  --cpus-per-task=12 --gres=lscratch:100"
 }

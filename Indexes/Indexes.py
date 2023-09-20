@@ -1,7 +1,7 @@
 #######################################
 # This Indexes.py Snakefile creates indexes necessary for RNA-seq analysis
 # Written by Matthew Brooks on Mar 30, 2017
-# Modified on Sept 14, 2023
+# Modified on Sept 19, 2023
 #######################################
 
 
@@ -18,13 +18,15 @@ import json
 
 #Import the species specific files from the config.py file
 configfile: "config.json"
-basedir = config["basedir"]
-name = config["name"]
 
-#These are not to be changed
-DIRS = ['STAR/', 'STAR/124base/', 'kallisto/', 'logs/']
-STAR = basedir + 'STAR/124base/' + 'SAindex'
-KAL = basedir + 'kallisto/' + name
+STARDIR = config["star_outdir"]
+KALLDIR = config["kall_outdir"]
+NAME = config["name"]
+
+
+# End point files
+STAR = STARDIR + 'Log.out'
+KAL = KALLDIR + NAME
 
 
 
@@ -32,39 +34,31 @@ KAL = basedir + 'kallisto/' + name
 # Snakemake rules for analysis
 ##############################
 
-localrules: dirs
+localrules: all
 
 
 rule all:
-    input: STAR, KAL, DIRS
+    input: STAR, KAL
     params: batch = config["job_all"]
     
 
-rule dirs:
-    output: DIRS
-    log:    "logs/dirs.log"   
-    params: 
-            rulename = "dirs",
-            batch = config["job_all"]
-    shell:  "cd {basedir}; mkdir -p "+' '.join(DIRS)
-
 rule star:
-    input: dir = 'STAR/124base/'
     output: STAR
     version: config["star"]
     log:    "logs/star.log"   
     params: 
             rulename = "star",
             batch = config["job_star"],
+            outdir = config["star_outdir"],
             ref = config["ref"],
             gtf = config["gtf"]
     shell: """ \
-    cd {basedir}; \
     module load STAR/{version} || exit 1;
+    mkdir -p {params.outdir};
     STAR \
     --runThreadN ${{SLURM_CPUS_ON_NODE}} \
     --runMode genomeGenerate \
-    --genomeDir {input.dir} \
+    --genomeDir {params.outdir} \
     --genomeFastaFiles {params.ref} \
     --sjdbGTFfile {params.gtf} \
     --sjdbOverhang 124 \
@@ -73,17 +67,17 @@ rule star:
 
 
 rule kallisto:
-    input: dir = 'kallisto/'
     output: KAL
     version: config["kallisto"]
     log:    "logs/kallisto.log"   
     params: 
             rulename = "kallisto",
             batch = config["job_kallisto"],
+            outdir = config["kall_outdir"],
             name = config["name"],
             trans = config["trans"]
     shell: """ \
-    cd {basedir}; \
     module load kallisto; \
-    kallisto index -i {input.dir}{params.name} {params.trans} \
+    mkdir -p {params.outdir};
+    kallisto index -i {params.outdir}/{params.name} {params.trans} \
     """
