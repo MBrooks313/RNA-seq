@@ -11,7 +11,7 @@
 #####################################
 
 # Load module
-module load python/3.7
+module load python/3.10
 
 # Export variables
 NOW=$(date +"%Y%m%d")
